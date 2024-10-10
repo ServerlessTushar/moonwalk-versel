@@ -86,7 +86,7 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden">
       <BackgroundGradient height="100%" zIndex="-1" />
-      <Container maxW="container.xl" pt={{ base: 40, lg: 60 }} pb="40">
+      <Container maxW="container.xl" pt={{ base: 20, lg: 30 }} pb="40">
         <Stack direction={{ base: 'column', lg: 'row' }} alignItems="center">
           <Hero
             id="home"
@@ -94,31 +94,31 @@ const HeroSection: React.FC = () => {
             px="0"
             title={
               <FallInPlace>
-                Build beautiful
-                <Br /> software faster
+                Scientific Weight Loss, 
+                <Br /> Crafted For You
               </FallInPlace>
             }
             description={
-              <FallInPlace delay={0.4} fontWeight="medium">
-                Saas UI is a <Em>React component library</Em>
-                <Br /> that doesn&apos;t get in your way and helps you <Br />{' '}
-                build intuitive SaaS products with speed.
+              <FallInPlace delay={0.4} fontWeight="medium" marginTop={16} marginBottom={8}>
+                Feel lighter than ever, <Br/>like walking on the moon
               </FallInPlace>
             }
           >
             <FallInPlace delay={0.8}>
-              <HStack pt="4" pb="12" spacing="8">
+              {/* <HStack pt="4" pb="12" spacing="8">
                 <NextjsLogo height="28px" /> <ChakraLogo height="20px" />
-              </HStack>
+              </HStack> */}
 
               <ButtonGroup spacing={4} alignItems="center">
-                <ButtonLink colorScheme="primary" size="lg" href="/signup">
+                {/* <ButtonLink colorScheme="primary" size="lg" href="/signup">
                   Sign Up
-                </ButtonLink>
+                </ButtonLink> */}
                 <ButtonLink
                   size="lg"
                   href="https://demo.saas-ui.dev"
-                  variant="outline"
+                  variant="solid"
+                  colorScheme="yellow"
+                  rounded="3xl"
                   rightIcon={
                     <Icon
                       as={FiArrowRight}
@@ -132,16 +132,28 @@ const HeroSection: React.FC = () => {
                     />
                   }
                 >
-                  View demo
+                  Lets Moonwalk
                 </ButtonLink>
               </ButtonGroup>
             </FallInPlace>
           </Hero>
+
+          <Box marginLeft={{ base: 0, lg: 10 }} marginTop={{ base: 4, lg: 0 }}> {/* Adjust margin as needed */}
+            <Image
+              src="/static/homepage/HeroImg.webp" // Replace with your image path
+              width={400} // Adjust width as needed
+              height={300} // Adjust height as needed
+              alt="New Image"
+              quality="75"
+            />
+          </Box>
+
           <Box
             height="600px"
             position="absolute"
             display={{ base: 'none', lg: 'block' }}
-            left={{ lg: '60%', xl: '55%' }}
+            left={{ lg: '50%', xl: '45%' }}
+            top={{ lg: '-20%', xl: '-15%' }}
             width="80vw"
             maxW="1100px"
             margin="0 auto"
@@ -149,10 +161,10 @@ const HeroSection: React.FC = () => {
             <FallInPlace delay={1}>
               <Box overflow="hidden" height="100%">
                 <Image
-                  src="/static/screenshots/list.png"
-                  width={1200}
-                  height={762}
-                  alt="Screenshot of a ListPage in Saas UI Pro"
+                  src="/static/homepage/HeroSideImg.webp"
+                  width={1088}
+                  height={1299}
+                  alt="Moon Img"
                   quality="75"
                   priority
                 />
@@ -162,7 +174,7 @@ const HeroSection: React.FC = () => {
         </Stack>
       </Container>
 
-      <Features
+      {/* <Features
         id="benefits"
         columns={[1, 2, 4]}
         iconSize={4}
@@ -202,7 +214,7 @@ const HeroSection: React.FC = () => {
           },
         ]}
         reveal={FallInPlace}
-      />
+      /> */}
     </Box>
   )
 }
