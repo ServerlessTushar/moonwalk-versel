@@ -3,7 +3,7 @@ import { Link } from '@saas-ui/react'
 import { NextSeoProps } from 'next-seo'
 import { FaGithub, FaTwitter } from 'react-icons/fa'
 import { FiCheck } from 'react-icons/fi'
-import { Logo } from './logo'
+import Logo from './logo'
 
 const siteConfig = {
   logo: Logo,
@@ -16,23 +16,23 @@ const siteConfig = {
   header: {
     links: [
       {
-        id: 'features',
-        label: 'Features',
+        id: 'How-it-Works',
+        label: 'How it Works',
       },
       {
-        id: 'pricing',
-        label: 'Pricing',
+        id: 'program',
+        label: 'Program',
+      },
+      {
+        id: 'results',
+        label: 'Results',
       },
       {
         id: 'faq',
-        label: 'FAQ',
+        label: 'FAQs',
       },
       {
-        label: 'Login',
-        href: '/login',
-      },
-      {
-        label: 'Sign Up',
+        label: 'Eligibility Test',
         href: '/signup',
         variant: 'primary',
       },
