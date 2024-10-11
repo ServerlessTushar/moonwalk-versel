@@ -168,9 +168,10 @@ const ScienceSlider = () => {
           zIndex={1}
         >
           <Text
-            fontSize={{ base: '3xl', md: '6xl' }}
+            fontSize={{ base: '2xl', md: '6xl' }}
             fontWeight="bold"
             mb={8}
+            width={{base: '90%', md: 'full'}}
           >
             SCIENCE TO SHAPE YOUR BEST SELF
           </Text>
@@ -183,7 +184,7 @@ const ScienceSlider = () => {
               onClick={prevSlide}
               bg="yellow.400"
               borderRadius="full"
-              size="lg"
+              size={{base: 'sm', md: 'lg'}}
             >
               <FaChevronLeft />
             </Button>
@@ -205,7 +206,7 @@ const ScienceSlider = () => {
               onClick={nextSlide}
               bg="yellow.400"
               borderRadius="full"
-              size="lg"
+              size={{base: 'sm', md: 'lg'}}
             >
               <FaChevronRight />
             </Button>
