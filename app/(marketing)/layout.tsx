@@ -1,5 +1,11 @@
-import { MarketingLayout } from '#components/layout'
+import { Metadata } from 'next'
 
-export default function Layout(props: { children: React.ReactNode }) {
-  return <MarketingLayout>{props.children}</MarketingLayout>
+export const metadata: Metadata = {
+  title: 'Your Page Title',
+  description: 'Your page description',
+  // Add other metadata properties as needed
+}
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
 }
