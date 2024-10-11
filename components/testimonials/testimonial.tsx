@@ -10,13 +10,13 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "@saas-ui/react";
 import { FaTwitter } from "react-icons/fa";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export interface TestimonialProps extends CardProps {
   name: string;
   description: React.ReactNode;
   lost?: string;
-  avatar: string;
+  avatar: StaticImageData;
   href?: string;
   children?: React.ReactNode;
 }
