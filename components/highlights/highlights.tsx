@@ -94,8 +94,8 @@ export const HighlightsTestimonialItem: React.FC<
   )
 }
 
-export const Highlights: React.FC<SectionProps> = (props) => {
-  const { children, ...rest } = props
+export const Highlights: React.FC<SectionProps & { title?: string }> = (props) => {
+  const { children, title, ...rest } = props
 
   return (
     <Section
@@ -104,6 +104,11 @@ export const Highlights: React.FC<SectionProps> = (props) => {
       overflow="hidden"
       {...rest}
     >
+      {title && (
+        <Heading as="h2" fontSize="4xl" fontWeight={700} mb={8} textAlign="center">
+          {title}
+        </Heading>
+      )}
       <Grid
         templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
         gap={8}

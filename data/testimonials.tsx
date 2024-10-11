@@ -1,40 +1,46 @@
+import testimmonial1 from '../public/static/homepage/testimonial1.webp'
+import testimmonial2 from '../public/static/homepage//testimonial2.webp'
+import testimmonial3 from '../public/static/homepage//testimonial3.webp'
+
 export default {
-  title: 'Loved by tech people',
+  title: 'START MOONWALKING TODAY, LIKE SO MANY OTHERS IN DUBAI',
   items: [
     {
       name: 'Eelco Wiersma',
-      description: 'Founder Saas UI',
-      avatar:
-        'https://pbs.twimg.com/profile_images/1470742164024008706/k-eXHtu0_normal.jpg',
+      description: 'Moonwalked to her Moonshot goal',
+      lost: 'Lost ~22kgs in 4 months',
+      avatar: testimmonial1,
       children: (
         <>
-          “With SaaS UI I am able to produce high quality dashboard apps and
-          internal tools without a lot of design skills. The ROI really is
-          amazing.”
+          I no longer stress over counting calories or points, and even if I have a couple of off days, 
+          I don&apos;t feel guilty about it. I&apos;ve lost 15% of my body weight, dropped a pant size, and will 
+          need to shop for new tops soon!s
         </>
       ),
     },
     {
       name: 'Caroline Yahaya',
-      description: 'Fullstack Developer',
-      avatar: '/static/images/avatar2.jpg',
+      description: 'Moonwalked to his Moonshot goal',
+      lost: 'Lost ~18kgs in 3 months',
+      avatar: testimmonial2,
       children: (
         <>
-          “Saas UI allows me to build beautiful and functional UI super fast.
-          The components are very well thought out and the Next.js starter kit
-          saved me at least 100 hours of work.”
+          I no longer stress over counting calories or points, and even if I have a couple of off days, 
+          I don&apos;t feel guilty about it. I&apos;ve lost 15% of my body weight, dropped a pant size, and will 
+          need to shop for new tops soon!s
         </>
       ),
     },
     {
       name: 'Alberto Vazquez',
-      description: 'Frontend Engineer',
-      avatar: '/static/images/avatar3.jpg',
+      description: 'Moonwalked to her Moonshot goal',
+      lost: 'Lost ~16kgs in 3 months',
+      avatar: testimmonial3,
       children: (
         <>
-          “Saas UI gave us a perfect starting point for our project, having the
-          storybooks already set up with beautifully crafted components and
-          fully mocked pages was a treat.”
+          I no longer stress over counting calories or points, and even if I have a couple of off days, 
+          I don&apos;t feel guilty about it. I&apos;ve lost 15% of my body weight, dropped a pant size, and will 
+          need to shop for new tops soon!s
         </>
       ),
     },
