@@ -60,6 +60,7 @@ import pricing from '#data/pricing'
 import testimonials from '#data/testimonials'
 import DrLedSection from 'sections/DrLedSection'
 import WeightLossGraphImg from '../../public/static/homepage/WeightLossGraphImg.webp'
+import StepIntoNewWorld from '../../sections/StepIntoNewWorld'
 
 const Home = () => {
   return (
@@ -67,9 +68,13 @@ const Home = () => {
       <HeroSection />
       <DrLedSection />
       <HighlightsSection />
-      <FeaturesSection />
+
+      <StepIntoNewWorld />
+      {/* <FeaturesSection /> */}
+
       <TestimonialsSection />
-      <PricingSection />
+
+      {/* <PricingSection /> */}
       <FaqSection />
     </Box>
   )
@@ -216,7 +221,8 @@ const HighlightsSection = () => {
   const { value, onCopy, hasCopied } = useClipboard('yarn add @saas-ui/react')
 
   return (
-    <Highlights>
+    <Highlights bg="#E6E5DE" title='LOSE UPTO 20% BODY WEIGHT, GUANRANTEED' color='#000232'>
+      {/* <Heading>LOSE UPTO 20% BODY WEIGHT, Guaranteed</Heading> */}
       <HighlightsItem colSpan={[1, null, 2]}>
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl" fontWeight={300}>
@@ -241,7 +247,6 @@ const HighlightsSection = () => {
           </Button>
         </VStack>
       </HighlightsItem>
-      {/* <HighlightsItem p={0}> */}
         <Box position="relative" width="100%" height="100%" boxShadow="none">
           <Image
             src={WeightLossGraphImg}
@@ -254,58 +259,7 @@ const HighlightsSection = () => {
             Lose up to <Text as='span' color="#F0BE3C">20%</Text><Br/> of your weight
           </Text>
         </Box>
-      {/* </HighlightsItem> */}
-      {/* <HighlightsTestimonialItem
-        name="Renata Alink"
-        description="Founder"
-        avatar="/static/images/avatar.jpg"
-        gradient={['pink.200', 'purple.500']}
-      >
-        “Saas UI helped us set up a beautiful modern UI in no time. It saved us
-        hundreds of hours in development time and allowed us to focus on
-        business logic for our specific use-case from the start.”
-      </HighlightsTestimonialItem>
-      <HighlightsItem
-        colSpan={[1, null, 2]}
-        title="Start your next idea two steps ahead"
-      >
-        <Text color="muted" fontSize="lg">
-          We took care of all your basic frontend needs, so you can start
-          building functionality that makes your product unique.
-        </Text>
-        <Wrap mt="8">
-          {[
-            'authentication',
-            'navigation',
-            'crud',
-            'settings',
-            'multi-tenancy',
-            'layouts',
-            'billing',
-            'a11y testing',
-            'server-side rendering',
-            'documentation',
-            'onboarding',
-            'storybooks',
-            'theming',
-            'upselling',
-            'unit testing',
-            'feature flags',
-            'responsiveness',
-          ].map((value) => (
-            <Tag
-              key={value}
-              variant="subtle"
-              colorScheme="purple"
-              rounded="full"
-              px="3"
-            >
-              {value}
-            </Tag>
-          ))}
-        </Wrap>
-      </HighlightsItem> */}
-    </Highlights>
+        </Highlights>
   )
 }
 

@@ -10,10 +10,12 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "@saas-ui/react";
 import { FaTwitter } from "react-icons/fa";
+import Image from "next/image";
 
 export interface TestimonialProps extends CardProps {
   name: string;
   description: React.ReactNode;
+  lost?: string;
   avatar: string;
   href?: string;
   children?: React.ReactNode;
@@ -22,6 +24,7 @@ export interface TestimonialProps extends CardProps {
 export const Testimonial = ({
   name,
   description,
+  lost,
   avatar,
   href,
   children,
@@ -30,11 +33,14 @@ export const Testimonial = ({
   return (
     <Card position="relative" {...rest}>
       <CardHeader display="flex" flexDirection="row" alignItems="center">
-        <Avatar name={name} src={avatar} size="sm" bg="transparent" />
+          <Image src={avatar} alt={`${name}'s avatar`} width={80} height={80} />
         <Stack spacing="1" ms="4">
           <Heading size="sm">{name}</Heading>
           <Text color="muted" size="xs">
             {description}
+          </Text>
+          <Text color="muted" size="xs">
+            {lost}
           </Text>
         </Stack>
       </CardHeader>
