@@ -2,6 +2,7 @@
 
 import {
   Box,
+  Button,
   ButtonGroup,
   Container,
   Flex,
@@ -58,6 +59,9 @@ import { Em } from '#components/typography'
 import faq from '#data/faq'
 import pricing from '#data/pricing'
 import testimonials from '#data/testimonials'
+import DrLedSection from 'sections/DrLedSection'
+import { Span } from 'next/dist/trace'
+import WeightLossGraphImg from '../../public/static/homepage/WeightLossGraphImg.webp'
 
 export const meta: Metadata = {
   title: 'Saas UI Landingspage',
@@ -68,6 +72,8 @@ const Home: NextPage = () => {
   return (
     <Box>
       <HeroSection />
+
+      <DrLedSection />
 
       <HighlightsSection />
 
@@ -224,54 +230,45 @@ const HighlightsSection = () => {
 
   return (
     <Highlights>
-      <HighlightsItem colSpan={[1, null, 2]} title="Core components">
+      <HighlightsItem colSpan={[1, null, 2]}>
         <VStack alignItems="flex-start" spacing="8">
-          <Text color="muted" fontSize="xl">
-            Get started for free with <Em>30+ open source components</Em>.
-            Including authentication screens with Clerk, Supabase and Magic.
-            Fully functional forms with React Hook Form. Data tables with React
-            Table.
+          <Text color="muted" fontSize="xl" fontWeight={300}>
+            We are your complete guide to weight loss, committed to doing whatever it takes to ensure you 
+            receive the best scientific and clinical careOur approach centers around biology, combining 
+            personalized coaching, GLP-1 medicines, science-backed procedures and intuitive educational 
+            resources to help you address all factors that influence weight.
           </Text>
-
-          <Flex
-            rounded="full"
-            borderWidth="1px"
-            flexDirection="row"
-            alignItems="center"
-            py="1"
-            ps="8"
-            pe="2"
-            bg="primary.900"
-            _dark={{ bg: 'gray.900' }}
+          <Text fontWeight={400} textColor="#000232">
+            Moonwalk delivers XX% better results - guaranteed.
+          </Text>
+          <Button
+              rightIcon={<FiArrowRight />}
+              bg="yellow.400"
+              color="black"
+              size="lg"
+              rounded="3xl"
+              _hover={{ bg: "yellow.500" }}
+              width={173}
           >
-            <Box>
-              <Text color="yellow.400" display="inline">
-                yarn add
-              </Text>{' '}
-              <Text color="cyan.300" display="inline">
-                @saas-ui/react
-              </Text>
-            </Box>
-            <IconButton
-              icon={hasCopied ? <FiCheck /> : <FiCopy />}
-              aria-label="Copy install command"
-              onClick={onCopy}
-              variant="ghost"
-              ms="4"
-              isRound
-              color="white"
-            />
-          </Flex>
+            Learn More
+          </Button>
         </VStack>
       </HighlightsItem>
-      <HighlightsItem title="Solid foundations">
-        <Text color="muted" fontSize="lg">
-          We don&apos;t like to re-invent the wheel, neither should you. We
-          selected the most productive and established tools in the scene and
-          build Saas UI on top of it.
-        </Text>
-      </HighlightsItem>
-      <HighlightsTestimonialItem
+      {/* <HighlightsItem p={0}> */}
+        <Box position="relative" width="100%" height="100%" boxShadow="none">
+          <Image
+            src={WeightLossGraphImg}
+            alt="Weight Loss Graph"
+            layout="fill"
+            objectFit="cover"
+            className='border-2 border-gray-300 rounded-md'
+          />
+          <Text color="#000232" fontSize="2xl" fontWeight={700} position={'absolute'} right={20} top={16}>
+            Lose up to <Text as='span' color="#F0BE3C">20%</Text><Br/> of your weight
+          </Text>
+        </Box>
+      {/* </HighlightsItem> */}
+      {/* <HighlightsTestimonialItem
         name="Renata Alink"
         description="Founder"
         avatar="/static/images/avatar.jpg"
@@ -320,7 +317,7 @@ const HighlightsSection = () => {
             </Tag>
           ))}
         </Wrap>
-      </HighlightsItem>
+      </HighlightsItem> */}
     </Highlights>
   )
 }
