@@ -37,7 +37,7 @@ const TimelineItem = ({ month, title, content, isOpen = false }) => (
     <AccordionButton>
       <HStack flex="1" textAlign="left" spacing={20}>
         <Text color="blue.500" fontWeight="bold" fontSize="2xl">
-          <Text color='#000232'>MONTH</Text> {month}
+          <Text color='#000232' fontWeight={400} fontSize="sm">MONTH</Text> {month}
         </Text>
         <Text fontWeight="bold">{title}</Text>
       </HStack>
