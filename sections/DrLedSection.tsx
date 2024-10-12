@@ -1,8 +1,8 @@
-import { Box, Button, Container, Flex, Heading, Stack, Text, VStack, HStack } from "@chakra-ui/react"
+import { Box, Button, Container, Flex, Heading, Stack, Text, VStack, HStack, useBreakpointValue } from "@chakra-ui/react"
 import { FiArrowRight } from 'react-icons/fi'
 import { keyframes } from '@emotion/react'
-import { DrLedSectionSliderImages } from "#data/data"
-import Image from "next/image"
+import { DrLedSectionSliderImages, DrLedSectionSliderImagesMob } from "#data/data"
+import Image, { StaticImageData } from "next/image"
 
 const slideAnimation = keyframes`
   0% { transform: translateX(0); }
@@ -11,18 +11,23 @@ const slideAnimation = keyframes`
 
 export default function DrLedSection() {
 
+    const imagesToDisplay = useBreakpointValue<StaticImageData[]>({
+        base: DrLedSectionSliderImagesMob,
+        md: DrLedSectionSliderImages,
+    }) || [];
+
   return (
-    <Box bg="#000232" color="#E6E5DE" py={24}>
+    <Box bg="#000232" color="#E6E5DE" py={{base: 12, md:24}}>
         <Flex direction={{ base: "column" }} align="center" justify="space-between" gap={24}>
-            <Flex direction={{ base: "column", md: "row" }} mb={{ base: 8, md: 0 }} gap={24}>
-                <Stack spacing={2} fontSize={{ base: "sm", md: "xl" }} paddingTop={4} fontWeight={300}>
+            <Flex direction={{ base: "column", md: "row" }} mb={{ base: 0, md: 0 }} gap={{base: 8, md: 24}}>
+                <Stack spacing={2} fontSize={{ base: "sm", md: "xl" }} paddingTop={4} fontWeight={300} order={{ base: 2, md: 1 }}>
                     <Text>• Customized Plans For Your Metabolic Profile</Text>
                     <Text>• GLP-1s And Medication Tailored To Your Needs</Text>
                     <Text>• New-Age Procedures Personalized For You</Text>
                     <Text>• Expert, Virtual And Ongoing Clinical Care</Text>
                 </Stack>
-                <Stack>
-                    <Heading as="h1" size="4xl" fontWeight="bold" lineHeight="shorter" marginBottom={6} fontFamily="Oswald, sans-serif">
+                <Stack order={{ base: 1, md: 2 }}>
+                    <Heading as="h1" size={{base: "2xl", md: "4xl"}} fontWeight="bold" lineHeight="shorter" marginBottom={6} fontFamily="Oswald, sans-serif">
                     DOCTOR-LED,<br />MEDICAL WEIGHT LOSS
                     </Heading>
                     <Button
@@ -46,7 +51,7 @@ export default function DrLedSection() {
                 width="200%"
                 gap={2}
                 >
-                {DrLedSectionSliderImages.concat(DrLedSectionSliderImages).map((src, index) => (
+                {imagesToDisplay.concat(imagesToDisplay).map((src, index) => (
                     <Image
                         key={index}
                         src={src}

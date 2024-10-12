@@ -522,7 +522,6 @@ import docIcon from "../public/static/homepage/docIcon.webp";
 import procedureIcon from "../public/static/homepage/procedure.webp";
 import researchIcon from "../public/static/homepage/research.webp";
 import guidanceIcon from "../public/static/homepage/guidance.webp";
-import ellipseBg from "../public/static/homepage/EllipseBg.webp"
 
 // const FeatureCard = ({ icon, title }) => (
 //   <Box bg="navy" p={4} borderRadius="md" color="white" textAlign="center">
@@ -650,18 +649,33 @@ const StepIntoNewWorld = () => {
     }
   ];
 
+  const settings = {
+    dots: true, // show navigation dots
+    infinite: true, // loop through slides
+    speed: 500,
+    slidesToShow: 4, // number of slides to show in desktop
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // for tablet
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768, // for mobile
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <Box maxWidth="1200px" margin="auto" p={4} mt={16} pb={16}>
-      <VStack spacing={8} align="stretch">
-        {/* <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" align="center">
-          <Text fontSize={{ base: '2xl', md: '3xl' }} fontWeight="bold" maxWidth="600px">
-            STEP INTO A NEW WORLD WHERE EVERY STEP FEELS LIGHTER
-          </Text>
-          <Box as={NextImage} src={Eye} alt="Eye" width={100} height={50} />
-        </Flex> */}
-
-<       Flex direction={{ base: "column", md: "row" }} position="relative">
-            <Heading size="4xl" mb={4} textColor='#000232' fontWeight={800} maxW={900} fontFamily="Oswald, sans-serif">
+      <VStack spacing={8}>
+        <Flex direction={{ base: "column", md: "row" }} position="relative" alignItems="center">
+            <Heading size={{base: "2xl", md:"4xl"}} mb={4} textColor='#000232' fontWeight={800} maxW={900} fontFamily="Oswald, sans-serif" textAlign={{base: "center", md: "left"}}>
                 STEP INTO A NEW WORLD WHERE EVERY STEP FEELS LIGHTER
             </Heading>
             <Image
@@ -680,7 +694,7 @@ const StepIntoNewWorld = () => {
         </Grid>
 
         <Box>
-            <Heading size="4xl" marginTop={10} marginBottom={16} textColor='#000232' fontWeight={800} textAlign="center" fontFamily="Oswald, sans-serif">
+            <Heading size={{base: "2xl", md:"4xl"}} marginTop={10} marginBottom={16} textColor='#000232' fontWeight={800} textAlign="center" fontFamily="Oswald, sans-serif">
                 UNVEIL A NEW YOU, IN SIX FULL MOONS
             </Heading>
           <Accordion allowMultiple index={expandedIndex}>
