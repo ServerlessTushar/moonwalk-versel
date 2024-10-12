@@ -22,7 +22,7 @@ export default function DrLedSection() {
                     <Text>• Expert, Virtual And Ongoing Clinical Care</Text>
                 </Stack>
                 <Stack>
-                    <Heading as="h1" size="4xl" fontWeight="bold" lineHeight="shorter" marginBottom={6}>
+                    <Heading as="h1" size="4xl" fontWeight="bold" lineHeight="shorter" marginBottom={6} fontFamily="Oswald, sans-serif">
                     DOCTOR-LED,<br />MEDICAL WEIGHT LOSS
                     </Heading>
                     <Button

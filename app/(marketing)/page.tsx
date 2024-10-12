@@ -257,7 +257,7 @@ const HighlightsSection = () => {
             objectFit="cover"
             className='border-2 border-gray-300 rounded-md'
           />
-          <Text color="#000232" fontSize="2xl" fontWeight={700} position={'absolute'} right={20} top={16}>
+          <Text color="#000232" fontSize="3xl" fontWeight={700} position={'absolute'} right={20} top={16} fontFamily="Oswald, sans-serif">
             Lose up to <Text as='span' color="#F0BE3C">20%</Text><Br/> of your weight
           </Text>
         </Box>

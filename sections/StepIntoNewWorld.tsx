@@ -565,7 +565,7 @@ const TimelineItem = ({ month, title, content, index, isExpanded, onToggle }) =>
       <Flex>
         <VStack align="flex-start" mr={4} flex="1" >
           <Text>MONTH</Text>
-          <Text fontSize="3xl" fontWeight="bold" color="#336699">{month}</Text>
+          <Text fontSize="3xl" fontWeight="bold" color="#336699" fontFamily="Oswald, sans-serif">{month}</Text>
           <Box 
             ml="1.5"
             w="2px" 
@@ -584,7 +584,7 @@ const TimelineItem = ({ month, title, content, index, isExpanded, onToggle }) =>
             onClick={() => onToggle(index)}
           >
             <Box flex="1" textAlign="left">
-              <Text fontSize="xl" fontWeight="bold">{title}</Text>
+              <Text fontSize="xl" fontWeight="bold" fontFamily="Oswald, sans-serif">{title}</Text>
             </Box>
             {isExpanded ? (
               <FaMinus color="#F0BE3C" />
@@ -661,7 +661,7 @@ const StepIntoNewWorld = () => {
         </Flex> */}
 
 <       Flex direction={{ base: "column", md: "row" }} position="relative">
-            <Heading size="4xl" mb={4} textColor='#000232' fontWeight={800} maxW={900}>
+            <Heading size="4xl" mb={4} textColor='#000232' fontWeight={800} maxW={900} fontFamily="Oswald, sans-serif">
                 STEP INTO A NEW WORLD WHERE EVERY STEP FEELS LIGHTER
             </Heading>
             <Image
@@ -680,7 +680,7 @@ const StepIntoNewWorld = () => {
         </Grid>
 
         <Box>
-            <Heading size="4xl" marginTop={10} marginBottom={16} textColor='#000232' fontWeight={800} textAlign="center">
+            <Heading size="4xl" marginTop={10} marginBottom={16} textColor='#000232' fontWeight={800} textAlign="center" fontFamily="Oswald, sans-serif">
                 UNVEIL A NEW YOU, IN SIX FULL MOONS
             </Heading>
           <Accordion allowMultiple index={expandedIndex}>

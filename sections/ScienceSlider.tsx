@@ -194,6 +194,7 @@ const ScienceSlider = () => {
             mt={32}
             width={{base: '90%', md: 'full'}}
             casing='uppercase'
+            fontFamily="Oswald, sans-serif"
           >
             We will use science to shape your best self
           </Text>

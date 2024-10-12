@@ -25,7 +25,7 @@ export const theme = extendTheme(
       }),
     },
     fonts: {
-      heading: 'Inter Variable, Inter, sans-serif',
+      heading: 'Oswald, sans-serif', //'Inter Variable, Inter, sans-serif',
       body: 'Inter Variable, Inter, sans-serif',
     },
     fontSizes,
