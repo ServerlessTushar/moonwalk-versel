@@ -7,10 +7,10 @@ interface HeroProps extends Omit<FlexProps, 'title'> {
 
 export const Hero = ({ title, description, children, ...rest }: HeroProps) => {
   return (
-    <Flex py="20" alignItems="center" {...rest}>
+    <Flex py={{base: "4", md:"20"}} alignItems="center" {...rest}>
       <Container>
         <VStack spacing={[4, null, 8]} alignItems="flex-start">
-          <Text as="h1" textStyle="h1" textAlign="left" casing='uppercase' fontFamily="Oswald, sans-serif">
+          <Text as="h1" textStyle="h1" textAlign="left" casing='uppercase' fontFamily="Oswald, sans-serif" fontSize={{ base: '3xl', md: "4xl" }}>
             {title}
           </Text>
           <Text

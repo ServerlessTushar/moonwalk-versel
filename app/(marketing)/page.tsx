@@ -61,6 +61,8 @@ import testimonials from '#data/testimonials'
 import DrLedSection from 'sections/DrLedSection'
 import WeightLossGraphImg from '../../public/static/homepage/WeightLossGraphImg.webp'
 import StepIntoNewWorld from '../../sections/StepIntoNewWorld'
+import WeightLossSection from 'sections/WeightLossSection'
+import WeightLossGraphImgMob from '../../public/static/homepage/WeightLossGraphImgMob.webp'
 
 const Home = () => {
   return (
@@ -68,6 +70,7 @@ const Home = () => {
       <HeroSection />
       <DrLedSection />
       <HighlightsSection />
+      {/* <WeightLossSection /> */}
 
       <StepIntoNewWorld />
       {/* <FeaturesSection /> */}
@@ -82,8 +85,8 @@ const Home = () => {
 
 const HeroSection: React.FC = () => {
   return (
-    <Box position="relative" overflow="hidden">
-      <BackgroundGradient height="100%" zIndex="-1" />
+    <Box position="relative" overflow="hidden" bg="#E6E5DE">
+      {/* <BackgroundGradient height="100%" zIndex="-1" /> */}
       <Container maxW="container.xl" pt={{ base: 20, lg: 30 }} pb="40">
         <Stack direction={{ base: 'column', lg: 'row' }} alignItems="center">
           <Hero
@@ -97,20 +100,13 @@ const HeroSection: React.FC = () => {
               </FallInPlace>
             }
             description={
-              <FallInPlace delay={0.4} fontWeight="medium" marginTop={16} marginBottom={8}>
+              <FallInPlace delay={0.4} fontWeight="medium" marginTop={{base: 4, md:16}} marginBottom={8}>
                 Feel lighter than ever, <Br/>like walking on the moon
               </FallInPlace>
             }
           >
             <FallInPlace delay={0.8}>
-              {/* <HStack pt="4" pb="12" spacing="8">
-                <NextjsLogo height="28px" /> <ChakraLogo height="20px" />
-              </HStack> */}
-
               <ButtonGroup spacing={4} alignItems="center">
-                {/* <ButtonLink colorScheme="primary" size="lg" href="/signup">
-                  Sign Up
-                </ButtonLink> */}
                 <ButtonLink
                   size="lg"
                   href="https://demo.saas-ui.dev"
@@ -138,9 +134,9 @@ const HeroSection: React.FC = () => {
 
           <Box marginLeft={{ base: 0, lg: 10 }} marginTop={{ base: 4, lg: 0 }}> {/* Adjust margin as needed */}
             <Image
-              src="/static/homepage/HeroImg.webp" // Replace with your image path
-              width={400} // Adjust width as needed
-              height={300} // Adjust height as needed
+              src="/static/homepage/HeroImg.webp"
+              width={400}
+              height={300}
               alt="New Image"
               quality="75"
             />
@@ -171,48 +167,6 @@ const HeroSection: React.FC = () => {
           </Box>
         </Stack>
       </Container>
-
-      {/* <Features
-        id="benefits"
-        columns={[1, 2, 4]}
-        iconSize={4}
-        innerWidth="container.xl"
-        pt="20"
-        features={[
-          {
-            title: 'Accessible',
-            icon: FiSmile,
-            description: 'All components strictly follow WAI-ARIA standards.',
-            iconPosition: 'left',
-            delay: 0.6,
-          },
-          {
-            title: 'Themable',
-            icon: FiSliders,
-            description:
-              'Fully customize all components to your brand with theme support and style props.',
-            iconPosition: 'left',
-            delay: 0.8,
-          },
-          {
-            title: 'Composable',
-            icon: FiGrid,
-            description:
-              'Compose components to fit your needs and mix them together to create new ones.',
-            iconPosition: 'left',
-            delay: 1,
-          },
-          {
-            title: 'Productive',
-            icon: FiThumbsUp,
-            description:
-              'Designed to reduce boilerplate and fully typed, build your product at speed.',
-            iconPosition: 'left',
-            delay: 1.1,
-          },
-        ]}
-        reveal={FallInPlace}
-      /> */}
     </Box>
   )
 }
@@ -222,10 +176,9 @@ const HighlightsSection = () => {
 
   return (
     <Highlights bg="#E6E5DE" title='LOSE UPTO 20% BODY WEIGHT, GUANRANTEED' color='#000232'>
-      {/* <Heading>LOSE UPTO 20% BODY WEIGHT, Guaranteed</Heading> */}
       <HighlightsItem colSpan={[1, null, 2]}>
         <VStack alignItems="flex-start" spacing="8">
-          <Text color="muted" fontSize="xl" fontWeight={300}>
+          <Text color="muted" fontSize={{base: "sm", md: "xl"}} fontWeight={300}>
             We are your complete guide to weight loss, committed to doing whatever it takes to ensure you 
             receive the best scientific and clinical care. Our approach focuses on your unique biology, 
             personalized coaching, GLP-1 or other medicines, science-backed procedures and intuitive 
@@ -248,16 +201,23 @@ const HighlightsSection = () => {
         </VStack>
       </HighlightsItem>
         <Box position="relative" width="100%" height="100%" boxShadow="none">
-          <Image
+          {/* <Image
             src={WeightLossGraphImg}
+            alt="Weight Loss Graph"
+            layout="fill"
+            objectFit="cover"
+            className='hidden md:block border-2 border-gray-300 rounded-md'
+          /> */}
+          <Image
+            src={WeightLossGraphImgMob}
             alt="Weight Loss Graph"
             layout="fill"
             objectFit="cover"
             className='border-2 border-gray-300 rounded-md'
           />
-          <Text color="#000232" fontSize="3xl" fontWeight={700} position={'absolute'} right={20} top={16} fontFamily="Oswald, sans-serif">
+          {/* <Text color="#000232" fontSize="3xl" fontWeight={700} position={'absolute'} right={20} top={{base: 4, md:16}} fontFamily="Oswald, sans-serif">
             Lose up to <Text as='span' color="#F0BE3C">20%</Text><Br/> of your weight
-          </Text>
+          </Text> */}
         </Box>
         </Highlights>
   )
