@@ -61,7 +61,6 @@ import testimonials from '#data/testimonials'
 import DrLedSection from 'sections/DrLedSection'
 import WeightLossGraphImg from '../../public/static/homepage/WeightLossGraphImg.webp'
 import StepIntoNewWorld from '../../sections/StepIntoNewWorld'
-import ScienceSlider from 'sections/ScienceSlider'
 
 const Home = () => {
   return (
@@ -71,7 +70,6 @@ const Home = () => {
       <HighlightsSection />
 
       <StepIntoNewWorld />
-      <ScienceSlider />
       {/* <FeaturesSection /> */}
 
       <TestimonialsSection />
