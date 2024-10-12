@@ -16,8 +16,8 @@ export interface TestimonialsProps
 export const Testimonials: React.FC<TestimonialsProps> = (props) => {
   const { children, title, columns = [1, null, 2], ...rest } = props
   return (
-    <Section {...rest}>
-      <SectionTitle title={title} />
+    <Section {...rest} bg='#336699'>
+      <SectionTitle title={title} color='white' />
       <SimpleGrid columns={columns} spacing="8">
         {children}
       </SimpleGrid>

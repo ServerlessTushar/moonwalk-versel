@@ -10,6 +10,7 @@ import {
 } from '../announcement-banner'
 import { Footer, FooterProps } from './footer'
 import { Header, HeaderProps } from './header'
+import Footer2 from 'sections/Footer2'
 
 interface LayoutProps {
   children: ReactNode
@@ -29,7 +30,7 @@ export const MarketingLayout: React.FC<LayoutProps> = (props) => {
         <SkipNavContent />
         {children}
       </Box>
-      <Footer {...footerProps} />
+      <Footer2 />
     </Box>
   )
 }
