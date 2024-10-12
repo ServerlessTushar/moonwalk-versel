@@ -21,11 +21,11 @@ export default function Footer2() {
             </Text>
             <HStack spacing={4}>
               <Icon as={FaPhone} />
-              <Text>+1-7252729625</Text>
+              <Text><a href="tel:+1-7252729625">+1-7252729625</a></Text>
             </HStack>
             <HStack spacing={4}>
               <Icon as={FaEnvelope} />
-              <Text>connect@moonwalk.com</Text>
+              <Text><a href="mailto:connect@moonwalk.com">connect@moonwalk.com</a></Text>
             </HStack>
           </VStack>
 

@@ -229,12 +229,12 @@ const HighlightsSection = () => {
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl" fontWeight={300}>
             We are your complete guide to weight loss, committed to doing whatever it takes to ensure you 
-            receive the best scientific and clinical careOur approach centers around biology, combining 
-            personalized coaching, GLP-1 medicines, science-backed procedures and intuitive educational 
-            resources to help you address all factors that influence weight.
+            receive the best scientific and clinical care. Our approach focuses on your unique biology, 
+            personalized coaching, GLP-1 or other medicines, science-backed procedures and intuitive 
+            educational resources to help you address all factors that will get you to your target weight.
           </Text>
           <Text fontWeight={400} textColor="#000232">
-            Moonwalk delivers XX% better results - guaranteed.
+            Moonwalk delivers better results than standalone solutions, guaranteed.
           </Text>
           <Button
               rightIcon={<FiArrowRight />}

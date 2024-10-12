@@ -610,7 +610,10 @@ const StepIntoNewWorld = () => {
         title: "Program kick off",
         content: (
             <VStack align="start" spacing={2}>
-                <Text>• Start On The GLP-1 Weight Loss Medication, Conveniently Delivered To Your Home</Text>
+              <Text>• Analyse your body and its unique metabolism</Text>
+              <Text>• Set your target and create custom plan with doctor and health coach</Text>
+              <Text>• Start on the appropriate medicine and early lifestyle changes</Text>
+              <Text>• Your coach will be available on chat 24x7</Text>
             </VStack>
         )
     },
@@ -619,9 +622,8 @@ const StepIntoNewWorld = () => {
         title: "Develop new habits", 
         content: (
             <VStack align="start" spacing={2}>
-              <Text>• Work with your coach to build healthy habits and improve your lifestyle</Text>
-              <Text>• Regularly consult with your doctor to discuss weight loss and any potential medication side effects</Text>
-              <Text>• Learn the fundamentals and understand the science behind your weight loss journey</Text>
+              <Text>• Start with tiny habits that impact and improve diet, exercise and sleep</Text>
+              <Text>• Talk to your doctors once a month and coach weekly for any queries</Text>
             </VStack>
         )
     },
@@ -630,27 +632,26 @@ const StepIntoNewWorld = () => {
         title: "Keep up momentum", 
         content: (
             <VStack align="start" spacing={2}>
-              <Text>• Continue working with your coach to keep seeing results and building great habits</Text>
-              <Text>• Reach the maintenance stage of your GLP-1 medication prescription</Text>
-              <Text>• Monitor your weight loss and health improvements - celebrate your successes</Text>
+              <Text>• Check biomarkers to quantify progress outside of body weight</Text>
+              <Text>• Continue momentum by calibrating medication as per doctor’s guidance</Text>
+              <Text>• Talk to doctors once a month and coach once in two weeks for any queries</Text>
             </VStack>
         )
     },
     { 
-        month: "6", 
+        month: "6+", 
         title: "Your new normal", 
         content: (
             <VStack align="start" spacing={2}>
-              <Text>• By following the program, you'll have made amazing progress already. But it doesn't end here.</Text>
-              <Text>• Moonwalk is your companion for however long you need us, so you'll discuss your next steps with your coach</Text>
-              <Text>• At any time, check in with your specialist doctor for any medical support</Text>
+              <Text>• Initiate weight maintenance and medication wean off program if needed</Text>
+              <Text>• It's a new you - now let's keep it that way</Text>
             </VStack>
         )
     }
   ];
 
   return (
-    <Box maxWidth="1200px" margin="auto" p={4} mt={16}>
+    <Box maxWidth="1200px" margin="auto" p={4} mt={16} pb={16}>
       <VStack spacing={8} align="stretch">
         {/* <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" align="center">
           <Text fontSize={{ base: '2xl', md: '3xl' }} fontWeight="bold" maxWidth="600px">
