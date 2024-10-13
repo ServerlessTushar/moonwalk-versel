@@ -214,7 +214,7 @@ const ScienceSlider = () => {
             <Box
               bg="#E6E5DE"
               p={6}
-              h={{ base: 210, md: 350 }}
+              h={{ base: 250, md: 350 }}
               borderRadius="md"
               width={{ base: 210, md: 350 }}
               color="#000232"

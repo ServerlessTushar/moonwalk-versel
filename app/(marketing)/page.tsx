@@ -63,6 +63,7 @@ import WeightLossGraphImg from '../../public/static/homepage/WeightLossGraphImg.
 import StepIntoNewWorld from '../../sections/StepIntoNewWorld'
 import WeightLossSection from 'sections/WeightLossSection'
 import WeightLossGraphImgMob from '../../public/static/homepage/WeightLossGraphImgMob.webp'
+import ScienceSlider from 'sections/ScienceSlider'
 
 const Home = () => {
   return (
@@ -73,6 +74,7 @@ const Home = () => {
       {/* <WeightLossSection /> */}
 
       <StepIntoNewWorld />
+      <ScienceSlider />
       {/* <FeaturesSection /> */}
 
       <TestimonialsSection />
