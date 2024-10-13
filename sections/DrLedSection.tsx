@@ -17,7 +17,7 @@ export default function DrLedSection() {
     }) || [];
 
   return (
-    <Box bg="#000232" color="#E6E5DE" py={{base: 12, md:24}}>
+    <Box bg="#000232" color="#E6E5DE" py={{base: 12, md:24}} id="How-it-Works">
         <Flex direction={{ base: "column" }} align="center" justify="space-between" gap={24}>
             <Flex direction={{ base: "column", md: "row" }} mb={{ base: 0, md: 0 }} gap={{base: 8, md: 24}}>
                 <Stack spacing={2} fontSize={{ base: "sm", md: "xl" }} paddingTop={4} fontWeight={300} order={{ base: 2, md: 1 }}>

@@ -32,19 +32,18 @@ const Navigation: React.FC = () => {
 
   return (
     <HStack spacing="2" flexShrink={0}>
-      {siteConfig.header.links.map(({ href, id, ...props }, i) => {
+      {siteConfig.header.links.map(({ id, ...props }, i) => {   //{ href, id, ...props }
         return (
           <NavLink
             display={['none', null, 'block']}
-            href={href || `/#${id}`}
+            href={`/#${id}`}  // {href || `/#${id}`}
             key={i}
             colorScheme='yellow'
             rounded='3xl'
             color={props.label === 'Eligibility Test' ? "#000" : "#E6E5DE"}
             isActive={
               !!(
-                (id && activeId === id) ||
-                (href && !!path?.match(new RegExp(href)))
+                (id && activeId === id)    // || (href && !!path?.match(new RegExp(href)))
               )
             }
             rightIcon={props.label === 'Eligibility Test' ? <Icon as={FiArrowRight} /> : undefined}

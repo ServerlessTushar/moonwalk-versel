@@ -26,9 +26,10 @@ interface NavLinkProps extends LinkProps {
   label: string
   href?: string
   isActive?: boolean
+  onClose?: () => void
 }
 
-function NavLink({ href, children, isActive, ...rest }: NavLinkProps) {
+function NavLink({ href, children, isActive, onClose, ...rest }: NavLinkProps) {
   const pathname = usePathname()
   const bgActiveHoverColor = useColorModeValue('gray.100', 'whiteAlpha.100')
 
@@ -51,6 +52,7 @@ function NavLink({ href, children, isActive, ...rest }: NavLinkProps) {
       _hover={{
         bg: isActive ? 'purple.500' : bgActiveHoverColor,
       }}
+      onClick={() => onClose?.()}
       {...rest}
     >
       {children}
@@ -67,7 +69,7 @@ export function MobileNavContent(props: MobileNavContentProps) {
   const { isOpen, onClose = () => {} } = props
   const closeBtnRef = React.useRef<HTMLButtonElement>(null)
   const pathname = usePathname()
-  const bgColor = useColorModeValue('whiteAlpha.900', 'blackAlpha.900')
+  const bgColor = useColorModeValue('#000232', 'blackAlpha.900')
 
   useRouteChanged(onClose)
   //console.log({ isOpen })
@@ -116,11 +118,12 @@ export function MobileNavContent(props: MobileNavContentProps) {
               </Flex>
               <Stack alignItems="stretch" spacing="0">
                 {siteConfig.header.links.map(
-                  ({ href, id, label, ...props }, i) => {
+                  ({ id, label, ...props }, i) => {   // { href, id, label, ...props }
                     return (
                       <NavLink
-                        href={href || `/#${id}`}
+                        href={`/#${id}`} // {href || `/#${id}`}
                         key={i}
+                        onClose={onClose}
                         {...(props as any)}
                       >
                         {label}
@@ -144,7 +147,7 @@ export const MobileNavButton = React.forwardRef(
         ref={ref}
         display={{ base: 'flex', md: 'none' }}
         fontSize="20px"
-        color={useColorModeValue('gray.800', 'inherit')}
+        color={useColorModeValue('#E6E5DE', 'inherit')}
         variant="ghost"
         icon={<AiOutlineMenu />}
         {...props}

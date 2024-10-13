@@ -30,10 +30,10 @@ export default function Footer2() {
           </VStack>
 
           <VStack align="flex-start" spacing={2}>
-            <Link href="#" fontWeight="bold">How it Works</Link>
-            <Link href="#" fontWeight="bold">Program</Link>
-            <Link href="#" fontWeight="bold">Results</Link>
-            <Link href="#" fontWeight="bold">FAQs</Link>
+            <Link href="#How-it-Works" fontWeight="bold">How it Works</Link>
+            <Link href="#program" fontWeight="bold">Program</Link>
+            <Link href="#results" fontWeight="bold">Results</Link>
+            <Link href="#faq" fontWeight="bold">FAQs</Link>
           </VStack>
         </Flex>
       </Container>

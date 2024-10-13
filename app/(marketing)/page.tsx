@@ -134,7 +134,7 @@ const HeroSection: React.FC = () => {
             </FallInPlace>
           </Hero>
 
-          <Box marginLeft={{ base: 0, lg: 10 }} marginTop={{ base: 4, lg: 0 }}> {/* Adjust margin as needed */}
+          <Box marginLeft={{ base: 0, lg: 10 }} marginTop={{ base: 4, lg: 0 }}>
             <Image
               src="/static/homepage/HeroImg.webp"
               width={400}
@@ -342,6 +342,7 @@ const TestimonialsSection = () => {
       title={testimonials.title}
       columns={[1, 2, 3]}
       innerWidth="container.xl"
+      id='results'
     >
       <>
         {columns.map((column, i) => (

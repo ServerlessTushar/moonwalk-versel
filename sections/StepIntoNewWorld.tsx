@@ -672,7 +672,7 @@ const StepIntoNewWorld = () => {
   };
 
   return (
-    <Box maxWidth="1200px" margin="auto" p={4} mt={16} pb={16}>
+    <Box maxWidth="1200px" margin="auto" p={4} mt={16} pb={16} id='program'>
       <VStack spacing={8}>
         <Flex direction={{ base: "column", md: "row" }} position="relative" alignItems="center">
             <Heading size={{base: "2xl", md:"4xl"}} mb={4} textColor='#000232' fontWeight={800} maxW={900} fontFamily="Oswald, sans-serif" textAlign={{base: "center", md: "left"}}>
