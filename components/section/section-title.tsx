@@ -24,7 +24,12 @@ export const SectionTitle: React.FC<SectionTitleProps> = (props) => {
       spacing={4}
       {...rest}
     >
-      <Heading sx={styles.title} as="h2">
+      <Heading 
+        //sx={styles.title} 
+        as="h2" 
+        fontSize={{ base: '3xl', md: "6xl" }} 
+        textAlign='center'
+      >
         {title}
       </Heading>
       {description && (

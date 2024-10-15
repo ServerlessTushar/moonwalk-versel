@@ -16,7 +16,7 @@ export default function Footer2() {
                 height={50} // Set the desired height
                 quality={75} // Optional: Set the quality of the image
             />
-            <Text maxW="400px" fontSize="sm">
+            {/* <Text maxW="400px" fontSize="sm">
               Lorem ipsum dolor sit amet consectetur. In semper fermentum volutpat amet duis feugiat. Hac libero purus suspendisse vitae tempus elementum sed. Purus nisl amet proin purus imperdiet. Potenti eu lacus aliquet ac condimentum augue.
             </Text>
             <HStack spacing={4}>
@@ -26,7 +26,7 @@ export default function Footer2() {
             <HStack spacing={4}>
               <Icon as={FaEnvelope} />
               <Text><a href="mailto:connect@moonwalk.com">connect@moonwalk.com</a></Text>
-            </HStack>
+            </HStack> */}
           </VStack>
 
           <VStack align="flex-start" spacing={2}>

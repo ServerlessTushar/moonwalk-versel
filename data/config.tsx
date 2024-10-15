@@ -33,7 +33,7 @@ const siteConfig = {
       },
       {
         label: 'Eligibility Test',
-        //href: '/signup',
+        href: '/eligibility',
         variant: 'primary',
       },
     ],

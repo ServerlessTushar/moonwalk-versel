@@ -169,6 +169,7 @@ const ScienceSlider = () => {
         position="relative"
         height={{ base: '100vh', md: '94vh' }}
         overflow="hidden"
+        paddingX={40}
       >
         <Image
           src={isMobile ? sliderBgImgMob : sliderBgImg}
@@ -194,7 +195,7 @@ const ScienceSlider = () => {
             mt={32}
             width={{base: '90%', md: 'full'}}
             casing='uppercase'
-            fontFamily="Oswald, sans-serif"
+            fontFamily='GratelosDisplay, sans-serif'
           >
             We will use science to shape your best self
           </Text>

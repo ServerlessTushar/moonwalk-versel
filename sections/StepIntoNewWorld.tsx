@@ -564,7 +564,7 @@ const TimelineItem = ({ month, title, content, index, isExpanded, onToggle }) =>
       <Flex>
         <VStack align="flex-start" mr={4} flex="1" >
           <Text>MONTH</Text>
-          <Text fontSize="3xl" fontWeight="bold" color="#336699" fontFamily="Oswald, sans-serif">{month}</Text>
+          <Text fontSize="3xl" fontWeight="bold" color="#336699" fontFamily='GratelosDisplay, sans-serif'>{month}</Text>
           <Box 
             ml="1.5"
             w="2px" 
@@ -583,7 +583,7 @@ const TimelineItem = ({ month, title, content, index, isExpanded, onToggle }) =>
             onClick={() => onToggle(index)}
           >
             <Box flex="1" textAlign="left">
-              <Text fontSize="xl" fontWeight="bold" fontFamily="Oswald, sans-serif">{title}</Text>
+              <Text fontSize="xl" fontWeight="bold" fontFamily='GratelosDisplay, sans-serif'>{title}</Text>
             </Box>
             {isExpanded ? (
               <FaMinus color="#F0BE3C" />
@@ -675,7 +675,7 @@ const StepIntoNewWorld = () => {
     <Box maxWidth="1200px" margin="auto" p={4} mt={16} pb={16} id='program'>
       <VStack spacing={8}>
         <Flex direction={{ base: "column", md: "row" }} position="relative" alignItems="center">
-            <Heading size={{base: "2xl", md:"4xl"}} mb={4} textColor='#000232' fontWeight={800} maxW={900} fontFamily="Oswald, sans-serif" textAlign={{base: "center", md: "left"}}>
+            <Heading size={{base: "2xl", md:"4xl"}} mb={4} textColor='#000232' fontWeight={800} maxW={900} fontFamily='GratelosDisplay, sans-serif' textAlign={{base: "center", md: "left"}}>
                 STEP INTO A NEW WORLD WHERE EVERY STEP FEELS LIGHTER
             </Heading>
             <Image
@@ -694,7 +694,7 @@ const StepIntoNewWorld = () => {
         </Grid>
 
         <Box>
-            <Heading size={{base: "2xl", md:"4xl"}} marginTop={10} marginBottom={16} textColor='#000232' fontWeight={800} textAlign="center" fontFamily="Oswald, sans-serif">
+            <Heading size={{base: "2xl", md:"4xl"}} marginTop={10} marginBottom={16} textColor='#000232' fontWeight={800} textAlign="center" fontFamily='GratelosDisplay, sans-serif'>
                 UNVEIL A NEW YOU, IN SIX FULL MOONS
             </Heading>
           <Accordion allowMultiple index={expandedIndex}>

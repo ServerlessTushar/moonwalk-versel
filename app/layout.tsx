@@ -1,5 +1,4 @@
 import { ColorModeScript, theme } from '@chakra-ui/react'
-
 import { Provider } from './provider'
 import Link from 'next/link'
 
@@ -27,10 +26,10 @@ export default function Layout(props: { children: React.ReactNode }) {
           href="/static/favicons/favicon-16x16.png"
         />
         <link rel="manifest" href="/static/favicons/manifest.json" />
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
           rel="stylesheet"
-        />
+        /> */}
       </head>
       <body className={`chakra-ui-${colorMode}`}>
         <ColorModeScript initialColorMode={colorMode} />
