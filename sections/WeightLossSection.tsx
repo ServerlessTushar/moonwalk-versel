@@ -68,7 +68,7 @@ export default function WeightLossSection() {
                 position='absolute' 
                 right={16} 
                 top={16} 
-                fontFamily="Oswald, sans-serif"
+                fontFamily='GratelosDisplay, sans-serif'
                 textAlign="right"
               >
                 Lose up to <Text as='span' color="#F0BE3C">20%</Text><br/> of your weight

@@ -25,8 +25,8 @@ export const theme = extendTheme(
       }),
     },
     fonts: {
-      heading: 'Oswald, sans-serif', //'Inter Variable, Inter, sans-serif',
-      body: 'Inter Variable, Inter, sans-serif',
+      heading: 'GratelosDisplay, sans-serif',//'Oswald, sans-serif', //'Inter Variable, Inter, sans-serif',
+      body: 'Fustat-VariableFont_wght, sans-serif',
     },
     fontSizes,
     components,

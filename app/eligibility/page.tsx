@@ -64,6 +64,7 @@ import StepIntoNewWorld from '../../sections/StepIntoNewWorld'
 import WeightLossSection from 'sections/WeightLossSection'
 import WeightLossGraphImgMob from '../../public/static/homepage/WeightLossGraphImgMob.webp'
 import ScienceSlider from 'sections/ScienceSlider'
+import ContactForm from '#components/ContactForm'
 
 const Home = () => {
   return (
@@ -133,7 +134,6 @@ const HeroSection: React.FC = () => {
               </ButtonGroup>
             </FallInPlace>
           </Hero>
-
           <Box marginLeft={{ base: 0, lg: "-16" }} marginTop={{ base: 4, lg: "60" }}>
             <Image
               src="/static/homepage/HeroImg.webp"
@@ -144,29 +144,7 @@ const HeroSection: React.FC = () => {
             />
           </Box>
 
-          <Box
-            height="600px"
-            position="absolute"
-            display={{ base: 'none', lg: 'block' }}
-            left={{ lg: '50%', xl: '45%' }}
-            top={{ lg: '-20%', xl: '-15%' }}
-            width="80vw"
-            maxW="1100px"
-            margin="0 auto"
-          >
-            <FallInPlace delay={1}>
-              <Box overflow="hidden" height="100%">
-                <Image
-                  src="/static/homepage/HeroSideImg.webp"
-                  width={1088}
-                  height={1299}
-                  alt="Moon Img"
-                  quality="75"
-                  priority
-                />
-              </Box>
-            </FallInPlace>
-          </Box>
+          <ContactForm />
         </Stack>
       </Container>
     </Box>
