@@ -163,7 +163,7 @@ const StepIntoNewWorld = () => {
       pb={16} 
       id='program'
       position="relative"
-      bgImage={bgImage.src}
+      bgImage={bgImage?.src}
       bgPosition="bottom"
       bgRepeat="no-repeat"
       bgSize="contain"
