@@ -36,8 +36,6 @@ const TimelineItem = ({ month, title, content, index, isExpanded, onToggle }) =>
     }
   }, [isExpanded]);
 
-  console.log('lineHeight: ', lineHeight);
-
   return (
     <AccordionItem mb={isExpanded ? 4 : 0}>
       <Flex>
@@ -170,7 +168,7 @@ const StepIntoNewWorld = () => {
     >
       <VStack spacing={8}>
         <Flex direction={{ base: "column", md: "row" }} position="relative" alignItems="center">
-            <Heading size={{base: "2xl", md:"4xl"}} mb={4} textColor='#000232' fontWeight={800} maxW={900} fontFamily='GratelosDisplay, sans-serif' textAlign={{base: "center", md: "left"}}>
+            <Heading size={{base: "2xl", md:"4xl"}} mb={4} textColor='#000232' fontWeight={800} maxW={900} fontFamily='GratelosDisplay, sans-serif' textAlign={{base: "center", md: "left"}} id='el-program'>
                 STEP INTO A NEW WORLD WHERE EVERY STEP FEELS LIGHTER
             </Heading>
             <Image

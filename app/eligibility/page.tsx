@@ -152,7 +152,7 @@ const HeroSection: React.FC = () => {
             position="absolute"
             display={{ base: 'none', lg: 'block' }}
             left={{ lg: '50%', xl: '55%' }}
-            top={{ lg: '-20%', xl: '-15%' }}
+            top={{ lg: '-20%', xl: '-5%' }}
             width="80vw"
             maxW="1100px"
             margin="0 auto"
@@ -345,7 +345,7 @@ const TestimonialsSection = () => {
       title={testimonials.title}
       columns={[1, 2, 3]}
       innerWidth="container.xl"
-      id='results'
+      id='el-results'
     >
       <>
         {columns.map((column, i) => (

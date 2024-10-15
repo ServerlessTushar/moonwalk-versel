@@ -4,6 +4,7 @@ import { keyframes } from '@emotion/react'
 import { DrLedSectionSliderImages, DrLedSectionSliderImagesMob } from "#data/data"
 import Image, { StaticImageData } from "next/image"
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
 
 const slideAnimation = keyframes`
   0% { transform: translateX(0); }
@@ -11,11 +12,12 @@ const slideAnimation = keyframes`
 `
 
 export default function DrLedSection() {
-
+    const pathName = usePathname()
     const imagesToDisplay = useBreakpointValue<StaticImageData[]>({
         base: DrLedSectionSliderImagesMob,
         lg: DrLedSectionSliderImages,
     }) || [];
+    const pathHref = pathName === '/eligibility' ? '#el-program' : '#program'
 
   return (
     <Box bg="#000232" color="#E6E5DE" py={{base: 12, md:24}} id="How-it-Works">
@@ -27,7 +29,7 @@ export default function DrLedSection() {
                     <Text>• New-Age Procedures Personalized For You</Text>
                     <Text>• Expert, Virtual And Ongoing Clinical Care</Text>
                 </Stack>
-                <Stack order={{ base: 1, md: 2 }}>
+                <Stack order={{ base: 1, md: 2 }} id="el-How-it-Works">
                     <Heading as="h2" size={{base: "2xl", md: "4xl"}} fontWeight="bold" lineHeight="shorter" marginBottom={6} fontFamily='GratelosDisplay, sans-serif'>
                     DOCTOR-LED,<br />MEDICAL WEIGHT LOSS
                     </Heading>
@@ -40,7 +42,7 @@ export default function DrLedSection() {
                         _hover={{ bg: "yellow.500" }}
                         width={173}
                         as={Link}
-                        href={'#program'}
+                        href={pathHref}
                     >
                     How It Works?
                     </Button>
