@@ -20,6 +20,7 @@ export const Hero = ({ title, description, children, ...rest }: HeroProps) => {
             lineHeight="shorter" 
             letterSpacing="tight"
             w="165%"
+            color="#000232"
           >
             {title}
           </Text>
@@ -27,7 +28,7 @@ export const Hero = ({ title, description, children, ...rest }: HeroProps) => {
             as="div"
             textStyle="subtitle"
             align="left"
-            color="gray.500"
+            color="#000232"
             _dark={{ color: 'gray.400' }}
           >
             {description}

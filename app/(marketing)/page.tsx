@@ -111,7 +111,7 @@ const HeroSection: React.FC = () => {
               <ButtonGroup spacing={4} alignItems="center">
                 <ButtonLink
                   size="lg"
-                  href="https://demo.saas-ui.dev"
+                  href="/eligibility"
                   variant="solid"
                   colorScheme="yellow"
                   rounded="3xl"
