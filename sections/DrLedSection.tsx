@@ -3,6 +3,7 @@ import { FiArrowRight } from 'react-icons/fi'
 import { keyframes } from '@emotion/react'
 import { DrLedSectionSliderImages, DrLedSectionSliderImagesMob } from "#data/data"
 import Image, { StaticImageData } from "next/image"
+import Link from "next/link";
 
 const slideAnimation = keyframes`
   0% { transform: translateX(0); }
@@ -38,6 +39,8 @@ export default function DrLedSection() {
                         rounded="3xl"
                         _hover={{ bg: "yellow.500" }}
                         width={173}
+                        as={Link}
+                        href={'#program'}
                     >
                     How It Works?
                     </Button>

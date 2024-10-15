@@ -90,7 +90,7 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden" bg="#E6E5DE">
       {/* <BackgroundGradient height="100%" zIndex="-1" /> */}
-      <Container maxW="container.xl" pt={{ base: 20, lg: 30 }} pb="40">
+      <Container maxW="container.xl" pt={{ base: 20, lg: 30 }} pb={{base: "10", md: "40"}}>
         <Stack direction={{ base: 'column', lg: 'row' }} alignItems="center">
           <Hero
             id="home"
@@ -98,13 +98,13 @@ const HeroSection: React.FC = () => {
             px="0"
             title={
               <FallInPlace>
-                Scientific Weight Loss, 
-                <Br /> Crafted For You
+                START YOUR <Br />TRANSFORMATION 
+                <Br />Today 
               </FallInPlace>
             }
             description={
               <FallInPlace delay={0.4} fontWeight="medium" marginTop={{base: 4, md:16}} marginBottom={8}>
-                Feel lighter than ever, <Br/>like walking on the moon
+                Sustainable Weight Loss, <Br />Backed by Science. <Br />Book free Consultation. Today!
               </FallInPlace>
             }
           >
@@ -112,7 +112,7 @@ const HeroSection: React.FC = () => {
               <ButtonGroup spacing={4} alignItems="center">
                 <ButtonLink
                   size="lg"
-                  href="https://demo.saas-ui.dev"
+                  href="/eligibility"
                   variant="solid"
                   colorScheme="yellow"
                   rounded="3xl"
@@ -134,7 +134,8 @@ const HeroSection: React.FC = () => {
               </ButtonGroup>
             </FallInPlace>
           </Hero>
-          <Box marginLeft={{ base: 0, lg: "-16" }} marginTop={{ base: 4, lg: "60" }}>
+
+          <Box marginLeft={{ base: 0, lg: "-52" }} marginTop={{ base: 4, lg: "60" }}>
             <Image
               src="/static/homepage/HeroImg.webp"
               width={400}
@@ -145,6 +146,30 @@ const HeroSection: React.FC = () => {
           </Box>
 
           <ContactForm />
+
+          <Box
+            height="600px"
+            position="absolute"
+            display={{ base: 'none', lg: 'block' }}
+            left={{ lg: '50%', xl: '55%' }}
+            top={{ lg: '-20%', xl: '-15%' }}
+            width="80vw"
+            maxW="1100px"
+            margin="0 auto"
+          >
+            <FallInPlace delay={1}>
+              <Box overflow="hidden" height="100%">
+                <Image
+                  src="/static/homepage/HeroSideImg.webp"
+                  width={1088}
+                  height={1299}
+                  alt="Moon Img"
+                  quality="75"
+                  priority
+                />
+              </Box>
+            </FallInPlace>
+          </Box>
         </Stack>
       </Container>
     </Box>

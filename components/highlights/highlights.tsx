@@ -9,9 +9,10 @@ import {
   useTheme,
 } from '@chakra-ui/react'
 import { transparentize } from '@chakra-ui/theme-tools'
-
+import Image from 'next/image'
 import { Section, SectionProps } from '#components/section'
 import { Testimonial, TestimonialProps } from '#components/testimonials'
+import HighlightsSectionSideImg from "../../public/static/homepage/HighlightsSectionSideImg.webp"
 
 export interface HighlightBoxProps
   extends GridItemProps,
@@ -116,6 +117,22 @@ export const Highlights: React.FC<SectionProps & { title?: string }> = (props) =
       >
         {children}
       </Grid>
+      <Box
+          position="absolute"
+          top="0"
+          right="0"
+          //width="100px"  // Adjust the size of the image
+          //height="100px"
+          display={{ base: 'none', md: 'block' }}  // Hidden on mobile (base), visible from md upwards
+        >
+          <Image
+            src={HighlightsSectionSideImg}
+            alt="Quarter Moon"
+            width={264.9}
+            height={244.26}
+            objectFit="contain"
+          />
+        </Box>
     </Section>
   )
 }

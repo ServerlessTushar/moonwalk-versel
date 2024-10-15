@@ -23,7 +23,7 @@ const Navigation: React.FC = () => {
       threshold: 0.75,
     },
   )
-
+    console.log('path: ', path)
   const mobileNavBtnRef = React.useRef<HTMLButtonElement>()
 
   useUpdateEffect(() => {
@@ -32,9 +32,18 @@ const Navigation: React.FC = () => {
 
   return (
     <HStack spacing="2" flexShrink={0}>
-      {siteConfig.header.links.map(({ id, ...props }, i) => {   //{ href, id, ...props }
+      {siteConfig.header.links
+      .filter(
+        (link) =>
+          link.label !== 'Eligibility Test' ||
+          path !== '/eligibility'
+      )
+      .map(({ id, ...props }, i) => {   //{ href, id, ...props }
         return (
           <NavLink
+            //width="169px"
+            //height="53px"
+            fontSize='lg'
             display={['none', null, 'block']}
             href={`/#${id}`}  // {href || `/#${id}`}
             key={i}

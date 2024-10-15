@@ -67,10 +67,10 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <Container maxW="380px" h="300px" centerContent bg="white" rounded="xl" boxShadow="md">
+    <Container maxW="380px" h="300px" centerContent bg="#F4F3ED" rounded="xl" boxShadow="md" marginTop={{base: "", md: "-40"}} marginRight="24">
       <Box w="100%" h="100%" p={4}>
         <VStack spacing={4} align="stretch">
-          <Heading size="lg" textAlign="center" mb={2}>Book Consultation</Heading>
+          <Heading size="lg" textAlign="center" mb={2}>Book Free Consultation</Heading>
           <form onSubmit={handleSubmit(onSubmit)}>
             <VStack spacing={3}>
               <FormControl isInvalid={!!errors.name}>
