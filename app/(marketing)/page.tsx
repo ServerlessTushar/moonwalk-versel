@@ -148,8 +148,8 @@ const HeroSection: React.FC = () => {
             height="600px"
             position="absolute"
             display={{ base: 'none', lg: 'block' }}
-            left={{ lg: '50%', xl: '45%' }}
-            top={{ lg: '-20%', xl: '5%' }}
+            left={{ lg: '50%', xl: '63%' }}
+            top={{ lg: '-20%', xl: '-5%' }}
             width="80vw"
             maxW="1100px"
             margin="0 auto"
