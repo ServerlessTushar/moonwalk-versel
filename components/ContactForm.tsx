@@ -95,12 +95,14 @@ const ContactForm: React.FC = () => {
                   {...register('mobileNumber')}
                 /> */}
                 <InputGroup>
-                  <InputLeftAddon children="+971" bg="#F4F3ED" borderWidth="1px" borderStyle="solid" borderColor="blackAlpha.300" />
+                  <InputLeftAddon bg="#F4F3ED" borderWidth="1px" borderStyle="solid" borderColor="blackAlpha.300">
+                    +971
+                  </InputLeftAddon>
                   <Input
                     id="mobileNumber"
                     placeholder="Enter your mobile number"
                     {...register('mobileNumber')}
-                    maxLength={9} // Restrict to 9 digits
+                    maxLength={9}
                   />
                 </InputGroup>
                 <FormErrorMessage>
