@@ -95,7 +95,7 @@ const ContactForm: React.FC = () => {
                   {...register('mobileNumber')}
                 /> */}
                 <InputGroup>
-                  <InputLeftAddon children="+971" bg="#F4F3ED" />
+                  <InputLeftAddon children="+971" bg="#F4F3ED" borderWidth="1px" borderStyle="solid" borderColor="blackAlpha.300" />
                   <Input
                     id="mobileNumber"
                     placeholder="Enter your mobile number"
