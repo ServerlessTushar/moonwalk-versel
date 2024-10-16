@@ -44,7 +44,7 @@ export default function DrLedSection() {
                         as={Link}
                         href={pathHref}
                     >
-                    How It Works?
+                    Learn More
                     </Button>
                 </Stack>
             </Flex>

@@ -109,7 +109,7 @@ const HeroSection: React.FC = () => {
             }
           >
             <FallInPlace delay={0.8}>
-              <ButtonGroup spacing={4} alignItems="center">
+              {/* <ButtonGroup spacing={4} alignItems="center">
                 <ButtonLink
                   size="lg"
                   href="/eligibility"
@@ -131,7 +131,7 @@ const HeroSection: React.FC = () => {
                 >
                   Lets Moonwalk
                 </ButtonLink>
-              </ButtonGroup>
+              </ButtonGroup> */}
             </FallInPlace>
           </Hero>
 
@@ -151,7 +151,7 @@ const HeroSection: React.FC = () => {
             height="600px"
             position="absolute"
             display={{ base: 'none', lg: 'block' }}
-            left={{ lg: '50%', xl: '55%' }}
+            left={{ lg: '50%', xl: '63%' }}
             top={{ lg: '-20%', xl: '-5%' }}
             width="80vw"
             maxW="1100px"
@@ -200,6 +200,12 @@ const HighlightsSection = () => {
               rounded="3xl"
               _hover={{ bg: "yellow.500" }}
               width={173}
+              onClick={() => {
+                const programSection = document.getElementById('program');
+                if (programSection) {
+                  programSection.scrollIntoView({ behavior: 'smooth' }); // Scrolls to the element
+                }
+              }}
           >
             Learn More
           </Button>
