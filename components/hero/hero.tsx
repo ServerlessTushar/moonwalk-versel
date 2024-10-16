@@ -15,11 +15,11 @@ export const Hero = ({ title, description, children, ...rest }: HeroProps) => {
             textStyle="h1" 
             textAlign="left" 
             casing='uppercase' 
-            fontFamily='GratelosDisplay, sans-serif' 
-            fontSize={{ base: '3xl', md: "6xl" }} 
+            fontFamily='GratelosDisplay' 
+            fontSize={{ base: '4xl', md: "6xl" }} 
             lineHeight="shorter" 
             letterSpacing="tight"
-            w="165%"
+            w={{base: "90%", md:"165%"}}
             color="#000232"
           >
             {title}

@@ -16,6 +16,9 @@ import {
   VStack,
   Wrap,
   useClipboard,
+  List,
+  ListItem,
+  ListIcon
 } from '@chakra-ui/react'
 import { Br, Link } from '@saas-ui/react'
 import Image from 'next/image'
@@ -64,6 +67,7 @@ import StepIntoNewWorld from '../../sections/StepIntoNewWorld'
 import WeightLossSection from 'sections/WeightLossSection'
 import WeightLossGraphImgMob from '../../public/static/homepage/WeightLossGraphImgMob.webp'
 import ScienceSlider from 'sections/ScienceSlider'
+import { MdCheckCircle } from "react-icons/md";
 
 const Home = () => {
   return (
@@ -89,7 +93,7 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden" bg="#E6E5DE">
       {/* <BackgroundGradient height="100%" zIndex="-1" /> */}
-      <Container maxW="container.xl" pt={{ base: 20, lg: 30 }} pb="40">
+      <Container maxW="container.xl" pt={{ base: 20, lg: 20 }} pb={{base: "10", md: "40"}}>
         <Stack direction={{ base: 'column', lg: 'row' }} alignItems="center">
           <Hero
             id="home"
@@ -97,13 +101,26 @@ const HeroSection: React.FC = () => {
             px="0"
             title={
               <FallInPlace>
-                Scientific Weight Loss, 
-                <Br /> Crafted For You
+                FeEL <Text color="#F0BE3C" as="span">LIGHTER</Text> thAN EVER, <Br/>LIKE WalKINg On THE MoON
               </FallInPlace>
             }
             description={
-              <FallInPlace delay={0.4} fontWeight="medium" marginTop={{base: 4, md:16}} marginBottom={8}>
-                Feel lighter than ever, <Br/>like walking on the moon
+              <FallInPlace delay={0.4} fontWeight="medium" marginTop={{base: 4, md:0}} marginBottom={8}>
+                <List spacing={3}>
+                  <ListItem>
+                    <ListIcon as={MdCheckCircle} />
+                    GLP1 weight loss medicines
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={MdCheckCircle} />
+                    New age weight loss procedures
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={MdCheckCircle} />
+                    Doctor-led customised plans for you
+                  </ListItem>
+                </List>
+                <Text mt={{base: 12, md:16}} fontSize='xl' fontWeight={700}>Scientific weight loss, crafted for you</Text>
               </FallInPlace>
             }
           >
@@ -134,11 +151,11 @@ const HeroSection: React.FC = () => {
             </FallInPlace>
           </Hero>
 
-          <Box marginLeft={{ base: 0, lg: "-16" }} marginTop={{ base: 4, lg: "60" }}>
+          <Box marginLeft={{ base: 0, lg: "64" }} marginTop={{ base: 4, lg: "0" }}>
             <Image
-              src="/static/homepage/HeroImg.webp"
-              width={400}
-              height={300}
+              src="/static/homepage/BannerImg.webp"
+              width={440}
+              height={552}
               alt="New Image"
               quality="75"
             />

@@ -41,7 +41,7 @@ const TimelineItem = ({ month, title, content, index, isExpanded, onToggle }) =>
       <Flex>
         <VStack align="flex-start" mr={4} flex="1" >
           <Text>MONTH</Text>
-          <Text fontSize="3xl" fontWeight="bold" color="#336699" fontFamily='GratelosDisplay, sans-serif'>{month}</Text>
+          <Text ml={-1} mt={-4} fontSize={{base: "3xl", md: "6xl"}} fontWeight="bold" color="#336699" fontFamily='GratelosDisplay, sans-serif'>{month}</Text>
           <Box 
             ml="1.5"
             w="2px" 
