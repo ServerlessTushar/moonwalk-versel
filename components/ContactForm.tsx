@@ -288,17 +288,18 @@ const ContactForm: React.FC = () => {
             p={4}
             bg="#000232"
             rounded="lg"
+            textAlign="center"
           >
-            <ModalHeader fontSize={"3xl"} mt={6}>Success!</ModalHeader>
+            <ModalHeader fontSize={"3xl"} mt={6}>Awesome!</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
-              Form submitted successfully
+              We&apos;ll be in touch soon to kickstart your personalized weight loss journey. Stay tuned!
             </ModalBody>
-            <ModalFooter>
+            {/* <ModalFooter>
               <Button colorScheme="yellow" mr={3} onClick={onSuccessClose}>
                 Close
               </Button>
-            </ModalFooter>
+            </ModalFooter> */}
           </Flex>
         </ModalContent>
       </Modal>
@@ -320,11 +321,11 @@ const ContactForm: React.FC = () => {
             <ModalBody>
               {errorMessage}
             </ModalBody>
-            <ModalFooter>
+            {/* <ModalFooter>
               <Button colorScheme="blue" mr={3} onClick={onErrorClose}>
                 Close
               </Button>
-            </ModalFooter>
+            </ModalFooter> */}
           </Flex>
         </ModalContent>
       </Modal>
