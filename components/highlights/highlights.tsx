@@ -106,7 +106,7 @@ export const Highlights: React.FC<SectionProps & { title?: string }> = (props) =
       {...rest}
     >
       {title && (
-        <Heading mt={{base: "-14", md: "0"}} as="h2" fontSize={{base: "3xl", md: "6xl"}} fontWeight={700} mb={12} textAlign="center" fontFamily='GratelosDisplay, sans-serif'>
+        <Heading mt={{base: "-14", md: "0"}} as="h2" fontSize={{base: "30px", md: "70px"}} fontWeight={400} mb={12} textAlign="center" fontFamily='GratelosDisplay, sans-serif'>
           {title}
         </Heading>
       )}

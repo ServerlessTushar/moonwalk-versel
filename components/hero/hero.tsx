@@ -16,9 +16,10 @@ export const Hero = ({ title, description, children, ...rest }: HeroProps) => {
             textAlign="left" 
             casing='uppercase' 
             fontFamily='GratelosDisplay' 
-            fontSize={{ base: '4xl', md: "6xl" }} 
+            fontSize={{ base: '30px', md: "70px" }} 
+            fontWeight={400}
             lineHeight="shorter" 
-            letterSpacing="tight"
+            letterSpacing="wider"
             w={{base: "90%", md:"165%"}}
             color="#000232"
           >

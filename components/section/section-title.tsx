@@ -27,8 +27,13 @@ export const SectionTitle: React.FC<SectionTitleProps> = (props) => {
       <Heading 
         //sx={styles.title} 
         as="h2" 
-        fontSize={{ base: '3xl', md: "6xl" }} 
+        fontSize={{ base: '30px', md: "70px" }} 
         textAlign='center'
+        fontFamily='GratelosDisplay' 
+        fontWeight={400}
+        letterSpacing="wider"
+        width={{base: "90%", md: "75%"}}
+        textTransform="uppercase"
       >
         {title}
       </Heading>
