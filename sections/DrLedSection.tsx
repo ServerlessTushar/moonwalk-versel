@@ -30,7 +30,7 @@ export default function DrLedSection() {
                     <Text>• Expert, Virtual And Ongoing Clinical Care</Text>
                 </Stack>
                 <Stack order={{ base: 1, md: 2 }} id="el-How-it-Works">
-                    <Heading as="h2" size={{base: "2xl", md: "4xl"}} fontWeight="bold" lineHeight="shorter" marginBottom={6} fontFamily='GratelosDisplay, sans-serif'>
+                    <Heading letterSpacing="wider" as="h2" fontSize={{base: "30px", md: "70px"}} fontWeight={400} lineHeight="shorter" marginBottom={6} fontFamily='GratelosDisplay, sans-serif'>
                     DOCTOR-LED,<br />MEDICAL WEIGHT LOSS
                     </Heading>
                     <Button

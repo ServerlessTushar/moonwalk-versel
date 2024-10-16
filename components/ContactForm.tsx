@@ -222,7 +222,7 @@ const ContactForm: React.FC = () => {
     <Container maxW="380px" centerContent bg="#F4F3ED" rounded="xl" boxShadow="md" marginTop={{base: "", md: "-40"}} marginRight="24" zIndex={1} textColor="#000232">
       <Box w="100%" h="100%" p={4}>
         <VStack spacing={4} align="stretch">
-          <Heading size="lg" textAlign="center" mb={2}>Book Free Consultation</Heading>
+          <Heading fontSize={{base: "lg", md: "36px"}} textAlign="center" mb={2} fontFamily='GratelosDisplay, sans-serif' letterSpacing="wider">Book Free Consultation</Heading>
           <form onSubmit={handleSubmit(onSubmit)}>
             <VStack spacing={3}>
               <FormControl isInvalid={!!errors.name}>

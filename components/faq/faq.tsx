@@ -9,7 +9,7 @@ interface FaqProps extends Omit<SectionProps, 'title' | 'children'> {
 
 export const Faq: React.FC<FaqProps> = (props) => {
   const {
-    title = 'Frequently asked questions',
+    title = 'FREQUENTLY ASKED QUESTIONS',
     description,
     items = [],
   } = props
@@ -34,10 +34,10 @@ export interface FaqItemProps {
 const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
   return (
     <chakra.dl>
-      <chakra.dt fontWeight="semibold" mb="2">
+      <chakra.dt fontWeight="semibold" mb="2" fontSize={{base: "14px", md: "20px"}} textColor="#000232">
         {question}
       </chakra.dt>
-      <chakra.dd color="muted">{answer}</chakra.dd>
+      <chakra.dd color="muted" fontSize={{base: "14px", md: "16px"}} textColor="#404040">{answer}</chakra.dd>
     </chakra.dl>
   )
 }

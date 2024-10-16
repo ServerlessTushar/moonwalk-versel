@@ -151,11 +151,11 @@ const HeroSection: React.FC = () => {
             </FallInPlace>
           </Hero>
 
-          <Box marginLeft={{ base: 0, lg: "64" }} marginTop={{ base: 4, lg: "0" }}>
+          <Box marginLeft={{ base: 0, lg: "32" }} marginTop={{ base: 4, lg: "4" }}>
             <Image
               src="/static/homepage/BannerImg.webp"
-              width={440}
-              height={552}
+              width={504.08}
+              height={532.94}
               alt="New Image"
               quality="75"
             />

@@ -230,7 +230,7 @@ const ScienceShapeCarousel = () => {
             {/* <Heading as="h1" size="2xl" fontWeight="bold" lineHeight="1.2">
               SCIENCE TO SHAPE YOUR BEST SELF
             </Heading> */}
-            <Heading as="h1" size={{base: "2xl", md: "4xl"}} fontWeight="bold" lineHeight="1.2">
+            <Heading as="h2" fontSize={{base: "30px", md: "70px"}} fontWeight={400} lineHeight="shorter" letterSpacing="wider" fontFamily={"GratelosDisplay"}>
               SCIENCE TO <Br/>SHAPE YOUR <Br/>BEST SELF
             </Heading>
           </Box>
