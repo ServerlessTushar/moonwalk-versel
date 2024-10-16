@@ -16,10 +16,12 @@ import {
   Spinner
 } from '@chakra-ui/react';
 import axios from 'axios';
+import { InputGroup } from '@chakra-ui/react';
+import { InputLeftAddon } from '@chakra-ui/react';
 
 const formSchema = z.object({
   name: z.string().min(1, 'Name is required').min(2, 'Name must be at least 2 characters'),
-  mobileNumber: z.string().min(1, 'Mobile number is required').regex(/^[6-9]\d{9}$/ , 'Invalid mobile number'),
+  mobileNumber: z.string().min(1, 'Mobile number is required').regex(/^[0-9]{9}$/ , 'Invalid mobile number'),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -67,7 +69,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <Container maxW="380px" centerContent bg="#F4F3ED" rounded="xl" boxShadow="md" marginTop={{base: "", md: "-40"}} marginRight="24" zIndex={1}>
+    <Container maxW="380px" centerContent bg="#F4F3ED" rounded="xl" boxShadow="md" marginTop={{base: "", md: "-40"}} marginRight="24" zIndex={1} textColor="#000232">
       <Box w="100%" h="100%" p={4}>
         <VStack spacing={4} align="stretch">
           <Heading size="lg" textAlign="center" mb={2}>Book Free Consultation</Heading>
@@ -87,11 +89,20 @@ const ContactForm: React.FC = () => {
 
               <FormControl isInvalid={!!errors.mobileNumber}>
                 <FormLabel htmlFor="mobileNumber">Mobile Number</FormLabel>
-                <Input
+                {/* <Input
                   id="mobileNumber"
                   placeholder="Enter your mobile number"
                   {...register('mobileNumber')}
-                />
+                /> */}
+                <InputGroup>
+                  <InputLeftAddon children="+971" bg="#F4F3ED" />
+                  <Input
+                    id="mobileNumber"
+                    placeholder="Enter your mobile number"
+                    {...register('mobileNumber')}
+                    maxLength={9} // Restrict to 9 digits
+                  />
+                </InputGroup>
                 <FormErrorMessage>
                   {errors.mobileNumber && errors.mobileNumber.message}
                 </FormErrorMessage>
