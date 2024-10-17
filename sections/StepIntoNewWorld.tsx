@@ -13,12 +13,12 @@ import timelineBgImg from "../public/static/homepage/timelineBgImg.webp";
 import timelineBgImgMob from "../public/static/homepage/timelineBgImgMob.webp";
 
 const FeatureCard = ({ title, icon }) => (
-  <Box bg="#000232" color="white" borderRadius="md" textAlign="left" w='246.05px' h='372.5px' p={6} position="relative">
+  <Box bg="#000232" color="white" borderRadius="md" textAlign="left" w='246.05px' h='372.5px' py={6} px={8} position="relative">
     <Image src={icon} alt={title} width={84.01} height={83.58} />
-    <Text fontSize="2xl" fontWeight={400} mb={8} mt={16}>
+    <Text fontSize={{base: "xl", 'md': "3xl"}} fontWeight={400} mb={8} mt={12}>
       {title}
     </Text>
-    <Button bgColor="#F0BE3C" size="sm" rounded="3xl" p={5} position="absolute" bottom={16}>
+    <Button bgColor="#F0BE3C" size={{base: "xs", md: "sm"}} rounded="3xl" p={5} position="absolute" bottom={10}>
       Learn More →
     </Button>
   </Box>
@@ -40,8 +40,8 @@ const TimelineItem = ({ month, title, content, index, isExpanded, onToggle }) =>
     <AccordionItem mb={isExpanded ? 4 : 0}>
       <Flex>
         <VStack align="flex-start" mr={4} flex="1" >
-          <Text>MONTH</Text>
-          <Text ml={-1} mt={-4} fontSize={{base: "3xl", md: "6xl"}} fontWeight="bold" color="#336699" fontFamily='GratelosDisplay, sans-serif'>{month}</Text>
+          <Text fontSize={{base: "lg", md: "22px"}}>MONTH</Text>
+          <Text mt={-4} fontSize={{base: "3xl", md: "6xl"}} fontWeight="bold" color="#336699" fontFamily='GratelosDisplay, sans-serif'>{month}</Text>
           <Box 
             ml="1.5"
             w="2px" 
@@ -68,7 +68,7 @@ const TimelineItem = ({ month, title, content, index, isExpanded, onToggle }) =>
               <FaPlus color="#F0BE3C" />
             )}
           </AccordionButton>
-          <AccordionPanel pb={4} bg="#404040" color="white" ref={contentRef} fontWeight={400} fontSize={{base: "16px", md: "20px"}}>
+          <AccordionPanel pb={4} bg="#404040" color="white" ref={contentRef} fontWeight={400} fontSize={{base: 'md', md: 'xl'}}>
             {content}
           </AccordionPanel>
         </Box>
