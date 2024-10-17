@@ -254,7 +254,7 @@ const ScienceShapeCarousel = () => {
                 alignItems="center" // Center horizontally
                 justifyContent="center" // Center vertically
               >
-                <Text fontWeight="bold" mb={6} fontSize="xl">{card.title}</Text>
+                <Text fontWeight={800} mb={6} fontSize={{base: "xl", md: "22px"}}>{card.title}</Text>
                 <Text fontSize="xl">{card.content}</Text>
               </Box>
               ))}

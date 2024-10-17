@@ -47,7 +47,7 @@ export const Header = (props: HeaderProps) => {
       {...props}
     >
       <Container maxW="container.2xl" px="8" py="4">
-        <Flex width="full" align="center" justify="space-between">
+        <Flex width="full" align="center" justify="space-between" height="53px">
           <Logo
             onClick={(e) => {
               if (window.location.pathname === '/') {

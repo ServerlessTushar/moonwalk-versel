@@ -106,7 +106,7 @@ const HeroSection: React.FC = () => {
             }
             description={
               <FallInPlace delay={0.4} fontWeight="medium" marginTop={{base: 4, md:0}} marginBottom={8}>
-                <List spacing={3}>
+                <List spacing={3} fontWeight={300} fontSize={{base: "sm", md: "lg"}}>
                   <ListItem>
                     <ListIcon as={MdCheckCircle} />
                     GLP1 weight loss medicines
@@ -120,7 +120,7 @@ const HeroSection: React.FC = () => {
                     Doctor-led customised plans for you
                   </ListItem>
                 </List>
-                <Text mt={{base: 12, md:16}} fontSize='xl' fontWeight={700}>Scientific weight loss, crafted for you</Text>
+                <Text mt={{base: 12, md: 20}} fontSize='24px' fontWeight={700}>Scientific weight loss, crafted for you</Text>
               </FallInPlace>
             }
           >
@@ -197,13 +197,13 @@ const HighlightsSection = () => {
     <Highlights bg="#E6E5DE" title='LOSE UPTO 20% BODY WEIGHT, GUANRANTEED' color='#000232'>
       <HighlightsItem colSpan={[1, null, 2]}>
         <VStack alignItems="flex-start" spacing="8">
-          <Text color="muted" fontSize={{base: "sm", md: "xl"}} fontWeight={300}>
+          <Text color="muted" fontSize={{base: "sm", md: "xl"}} fontWeight={400} textColor="#000232">
             We are your complete guide to weight loss, committed to doing whatever it takes to ensure you 
             receive the best scientific and clinical care. Our approach focuses on your unique biology, 
             personalized coaching, GLP-1 or other medicines, science-backed procedures and intuitive 
             educational resources to help you address all factors that will get you to your target weight.
           </Text>
-          <Text fontWeight={400} textColor="#000232">
+          <Text fontWeight={800} textColor="#000232" fontSize={{base: "sm", md: "xl"}}>
             Moonwalk delivers better results than standalone solutions, guaranteed.
           </Text>
           <Button
