@@ -151,8 +151,9 @@ const HeroSection: React.FC = () => {
             height="600px"
             position="absolute"
             display={{ base: 'none', lg: 'block' }}
-            left={{ lg: '50%', xl: '63%' }}
-            top={{ lg: '-20%', xl: '-5%' }}
+            left={{ lg: '50%', xl: '75%' }}
+            //top={{ lg: '-20%', xl: '-5%' }}
+            bottom={{ lg: '-20%', xl: '-30%' }}
             width="80vw"
             maxW="1100px"
             margin="0 auto"
@@ -161,8 +162,8 @@ const HeroSection: React.FC = () => {
               <Box overflow="hidden" height="100%">
                 <Image
                   src="/static/homepage/HeroSideImg.webp"
-                  width={1088}
-                  height={1299}
+                  width={449.92}
+                  height={369.26}
                   alt="Moon Img"
                   quality="75"
                   priority
