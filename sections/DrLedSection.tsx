@@ -56,14 +56,27 @@ export default function DrLedSection() {
                 width="200%"
                 gap={2}
                 >
-                {imagesToDisplay.concat(imagesToDisplay).map((src, index) => (
+                {/* {imagesToDisplay.concat(imagesToDisplay).map((src, index) => (
                     <Image
                         key={index}
                         src={src}
                         alt={`Medical item ${index + 1}`}
                         objectFit="cover"
                     />
-                ))}
+                ))} */}
+                {imagesToDisplay.concat(imagesToDisplay).map((src, index) => {
+                    const isElliptical = index % 2 === 0; // Example condition for elliptical images
+                    return (
+                        <Image
+                            key={index}
+                            src={src}
+                            alt={`Medical item ${index + 1}`}
+                            objectFit="cover"
+                            width={isElliptical ? 224.31 : 115.1}
+                            height={isElliptical ? 115.1 : 115.1}
+                        />
+                    );
+                })}
                 </Flex>
             </Box>
         </Flex>
